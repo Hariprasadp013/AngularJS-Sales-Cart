@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myControl">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<head>
+		<title>
+			Fruits Cart
+		</title>
+	</head>
+	<body>
+		<div class="search">
+			Search{{" "}}<input ng-model="search">
+		</div>
+		<div class="row">
+			<table cellpadding="10">
+				<tr><td colspan="4" class="right"><i class="glyphicon glyphicon-shopping-cart"></i>
+					<span class="total">{{totalCount()}}{{" "}}Items
+				        {{totalPrice()| currency}}</span></td>
+				</tr>
+			       	<tr ng-repeat="item in items |filter:{name: search}">
+					<td><img ng-src="images/{{item.img}}.jpg" alt="{{item.img}}"></td>
+					<td><h3>{{item.name}}</h3>
+					    <h4>{{item.desc}}</h4></td>
+					<td><span class="pull-right">{{item.price | currency}}</span></td>
+					<td class="td"><a href="#" ng-click="addCart(item)">Add to cart</a></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>	
+	<script src="controller.js"></script>	
+</html>
