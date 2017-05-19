@@ -1,0 +1,45 @@
+.search{
+	width:1000px;
+	height:50px;
+	margin-left:120px;
+	margin-top:10px;
+}
+input{
+	width:500px;
+}
+table{
+	width:1000px;
+	margin-left:100px;
+}
+table,td{
+    	border: 1px solid #CFD3D4;
+    	border-collapse: collapse;
+}
+.right{
+	text-align:right;
+}
+td{
+ 	padding: 10px;
+    	text-align: left;
+}
+.td{
+   	text-align: center;   
+}
+.row{
+	margin-left:20px;
+}
+h3{
+	color:green;
+}
+img{
+	height:100px;
+	width:100px;
+}
+td img{
+	display: block;
+	margin-left: auto;
+    	margin-right: auto;
+}
+.total{
+	color:green;
+}
